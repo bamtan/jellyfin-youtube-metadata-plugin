@@ -35,7 +35,7 @@ namespace Jellyfin.Plugin.YoutubeMetadata.Providers
         public static YoutubeMetadataProvider Current;
 
         public const string BaseUrl = "https://m.youtube.com/";
-        public const string YTID_RE = @"(?<=\[)[a-zA-Z0-9\-_]{11}(?=\])";
+        public const string YTID_RE = @"[a-zA-Z0-9\-_]{11}(?=\.)";
 
         public YoutubeMetadataProvider(IServerConfigurationManager config, IFileSystem fileSystem, IHttpClient httpClient, IJsonSerializer json, ILogger<YoutubeMetadataProvider> logger, ILibraryManager libmanager)
         {
